@@ -19,4 +19,3 @@ licencia = True
 
 if not gas and encendido and edad > 17:
 	mensaje="A MANEJAR!!!"
-
