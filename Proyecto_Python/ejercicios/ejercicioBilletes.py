@@ -13,6 +13,7 @@
 # monto, billete_100 = billetes(monto,100)
 # monto, billeteQuinientos = billetes(monto, 50)
 #
+#
 # if monto == 0:
 # 	print("Se puede dar el monto exacto")
 # 	print("Billetes de 1000: ", billete_1000)
@@ -23,32 +24,25 @@
 # 	print("Monto: ", monto_copia)
 # else:
 # 	print("No se puede dar el monto exacto")
-#
+
 
 
 monto = 2250
-monto_copia = monto
 
-# Billetes de 1000
-cantidad_billetes = 0 # Aqui se guarda la cantidad de billetes
-operación = monto // 1000 # Aqui se divide el monto entre el valor del billete
-cantidad_billetes += operación # Aqui se acumula la cantidad de billetes
-monto -= 1000 * operación # Aqui se resta el monto con la cantidad de billetes
-print("Billetes de 1000: ", cantidad_billetes) # Aqui se imprime la cantidad de billetes
 
 # Billetes de 500
-cantidad_billetes = 0
-operación = monto // 500
-cantidad_billetes += operación
+cantidad_billetes = 0 # Crear una variable en cero
+operación = monto // 500 # Verifico que mi monto se pueda dividir exacatamente entre los 500 pesos
+cantidad_billetes += operación # Aquí lo que hago es sumar la cantidad de billetes a mi variable cantidad_billetes
 monto -= 500 * operación
 print("Billetes de 500: ", cantidad_billetes)
 
-# Billetes de 200
+# Billetes de 250
 cantidad_billetes = 0
-operación = monto // 200
+operación = monto // 250
 cantidad_billetes += operación
-monto -= 200 * operación
-print("Billetes de 200: ", cantidad_billetes)
+monto -= 250 * operación
+print("Billetes de 250: ", cantidad_billetes)
 
 # Billetes de 100
 cantidad_billetes = 0

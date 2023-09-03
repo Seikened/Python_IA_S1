@@ -13,6 +13,3 @@ print(f"""
 x en positivo es: {xPositiva}
 x en negativo es: {xNegativa} 
 """)
-
-print("x en positivo es: ", xPositiva, )
-print("x en negativo es: ", xNegativa, )
