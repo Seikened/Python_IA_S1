@@ -7,5 +7,6 @@ constante = 0.5
 aceleracion_m_s2 = -9.81
 tiempoCuadrado_s2 = tiempo_s ** 2.0
 
-calculoPosicion = posicionInicial_m + (velocidadInicial_m_s * tiempo_s) + (constante * aceleracion_m_s2 * tiempoCuadrado_s2)
-print("La posición del objeto es: ", calculoPosicion,"m")
+calculoPosicion = posicionInicial_m + (velocidadInicial_m_s * tiempo_s) + (
+		constante * aceleracion_m_s2 * tiempoCuadrado_s2)
+print("La posición del objeto es: ", calculoPosicion, "m")

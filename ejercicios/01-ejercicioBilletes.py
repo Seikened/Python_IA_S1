@@ -24,16 +24,14 @@
 #     print("No se puede dar el monto exacto")
 
 
-
-
 # Programa de cajero automático para entregar la menor cantidad de billetes
 
 
-RetiroTotal = int(input("Introduce tu cantidad multiplos de 50: ")) # Total a retirar
+RetiroTotal = int(input("Introduce tu cantidad multiplos de 50: "))  # Total a retirar
 
 # Billetes de 500
-B500 = RetiroTotal // 500 # Esto es para sumar y mostrar la cantidad de billetes de 500 al usuario
-RetiroTotal %= 500 # Esto da el resto de la división de RetiroTotal entre 500 (el monto que falta por entregar) para calculo interno
+B500 = RetiroTotal // 500  # Esto es para sumar y mostrar la cantidad de billetes de 500 al usuario
+RetiroTotal %= 500  # Esto da el resto de la división de RetiroTotal entre 500 (el monto que falta por entregar) para calculo interno
 print("Billetes de 500: ", B500)
 
 # Billetes de 200
