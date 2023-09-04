@@ -13,3 +13,8 @@ print(f"""
 x en positivo es: {xPositiva}
 x en negativo es: {xNegativa} 
 """)
+# Revisar si la formula general esta bien
+xMas=xNegativa
+xMenos=xPositiva
+ecuacionMas = a * (xMas ** 2) + b * xMas + c
+ecuacionMenos = a * (xMenos ** 2) + b * xMenos + c
