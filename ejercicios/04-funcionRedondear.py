@@ -1,29 +1,12 @@
-numeroDecimal =  9.86567
-int(input("Ingrese el numero de decimales que desea: "))
-factor = 10 ** n_decimales
+numero =  float(input("Ingrese un numero a redondear: "))
+decimales = int(input("Ingrese la cantidad de decimales: "))
 
+def redondear(numero, decimales=0):
+	factor = 10 ** decimales # Aqui se toma que si busco 2 decimales, el factor es 100, si busco 3, el factor es 1000, etc.
+	# El numero primero se multiplica para recorrer la coma la cantidad de decimales que se buscan,
+	# luego se suma 0.5 para que el redondeo sea correcto y suba el numero si es necesario.
+	calculo = (numero * factor) + 0.5
+	# Se divide por los mismos decimales para que el numero vuelva a su estado original, pero redondeado.
+	return int(calculo)/factor
 
-# Un números decimales
-numeroUnDigitos = numeroDecimal
-reduccionDecimalUnDigito = (numeroUnDigitos + 0.05)
-reduccionDecimalUnDigito *=  10
-reduccionDecimalUnDigito = int(reduccionDecimalUnDigito)
-reduccionDecimalUnDigito /=  10
-
-print("El numero decimal ingresado es: ", reduccionDecimalUnDigito)
-# Dos números decimales
-numeroDosDigitos = numeroDecimal
-reduccionDecimalDosDigitos = (numeroDosDigitos + 0.005)
-reduccionDecimalDosDigitos *=  100
-reduccionDecimalDosDigitos = int(reduccionDecimalDosDigitos)
-reduccionDecimalDosDigitos /=  100
-
-print("El numero decimal ingresado es: ", reduccionDecimalDosDigitos)
-# Tres números decimales
-numeroTresDigitos = numeroDecimal
-reduccionDecimalTresDigitos = (numeroTresDigitos + 0.0005)
-reduccionDecimalTresDigitos *=  1000
-reduccionDecimalTresDigitos = int(reduccionDecimalTresDigitos)
-reduccionDecimalTresDigitos /=  1000
-
-print("El numero decimal ingresado es: ", reduccionDecimalTresDigitos)
+print(redondear(numero, decimales))
