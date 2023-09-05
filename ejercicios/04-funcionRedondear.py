@@ -9,4 +9,4 @@ def redondear(numero, decimales=0):
 	# Se divide por los mismos decimales para que el numero vuelva a su estado original, pero redondeado.
 	return int(calculo)/factor
 
-print(redondear(numero, decimales))
+print(f"Tu numero {numero} se ha redondeado a {decimales} decimales resultando: ",redondear(numero, decimales))
