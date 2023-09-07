@@ -5,5 +5,3 @@ nombreCompleto("Juan", "Perez")
 nombreCompleto("Juan")
 nombreCompleto(apellido="Perez", nombre="Juan")
 test = 0
-# HOLA COMOESATS
-# TEST
