@@ -20,4 +20,5 @@ def calcular_probabilidad_acumulada_binomial_usuario():
 	probabilidad_acumulada = calcular_probabilidad_acumulada_binomial(n, p, k)
 	print(f"La probabilidad acumulada de tener {k} o menos éxitos en {n} ensayos es: {probabilidad_acumulada:.6f}")
 
+
 calcular_probabilidad_acumulada_binomial_usuario()
