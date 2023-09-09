@@ -1,4 +1,4 @@
-from tornillo_08 import calcularTornillo
+from A8_tornillo import calcularTornillo
 
 def calcular_coordenadas_tornillo_corregido(numero_tornillo):
     distanciaConstante = 15
