@@ -1,4 +1,4 @@
-from ... / ejercicios / funcio
+
 
 
 def suma(*numeros):
