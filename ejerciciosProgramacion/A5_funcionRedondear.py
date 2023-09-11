@@ -1,5 +1,6 @@
-numero =  float(input("Ingrese un numero a redondear: "))
+numero = float(input("Ingrese un numero a redondear: "))
 decimales = int(input("Ingrese la cantidad de decimales: "))
+
 
 def redondear(numero, decimales=0):
 	factor = 10 ** decimales
@@ -8,6 +9,7 @@ def redondear(numero, decimales=0):
 	# luego se suma 0.5 para que el redondeo sea correcto y suba el numero si es necesario.
 	calculo = (numero * factor) + 0.5
 	# Se divide por los mismes decimales para que el numero vuelva a su estado original, pero redondeado.
-	return int(calculo)/factor
+	return int(calculo) / factor
 
-print(f"Tu numero {numero} se ha redondeado a {decimales} decimales resultando: ",redondear(numero, decimales))
+
+print(f"Tu numero {numero} se ha redondeado a {decimales} decimales resultando: ", redondear(numero, decimales))

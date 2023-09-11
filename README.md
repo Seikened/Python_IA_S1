@@ -1,2 +1,5 @@
 # Python_IA_S1
-https://code-with-me.global.jetbrains.com/Q5bdy1zLVh7fx-XZgWghLQ#p=PY&fp=9BF88AF1B7FDB6A68EC15AB9536D7E73A3F16928BF09B3DFCDAE62389D8C74FE
+
+- Proyecto de Inteligencia Artificial
+- Semestre 1
+- Python

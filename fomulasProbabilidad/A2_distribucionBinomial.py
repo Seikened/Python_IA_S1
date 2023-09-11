@@ -9,7 +9,8 @@ def calcular_probabilidad_binomial():
 
 	coef_binomial = comb(experimento, exitos)
 
-	probabilidad = coef_binomial * (probabilidadDelEnsayo ** exitos) * ((1 - probabilidadDelEnsayo) ** (experimento - exitos))
+	probabilidad = coef_binomial * (probabilidadDelEnsayo ** exitos) * (
+				(1 - probabilidadDelEnsayo) ** (experimento - exitos))
 
 	print(f"La probabilidad de tener exactamente {exitos} éxitos en {experimento} ensayos es: {probabilidad:.6f}")
 

@@ -70,5 +70,3 @@ while True:
 		operacion /= segundoNúmero
 	elif operacion == "multi":
 		operacion *= segundoNúmero
-
-

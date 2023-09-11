@@ -7,7 +7,6 @@ elif edad >= 18:
 else:
 	print("❌No puede ver la pelicula")
 
-
 if edad >= 18:
 	if edad > 54:
 		print("🎫Recibes un descuento para ver tu pelicula")

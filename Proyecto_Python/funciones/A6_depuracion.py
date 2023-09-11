@@ -4,4 +4,5 @@ def largo(texto):
 		resultado += 1
 	return resultado
 
+
 print(largo("Hola Mundo"))
