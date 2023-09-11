@@ -8,3 +8,6 @@ else:
 	print("No puedes tramitar tu licencia")
 	print("Debes tener 18 años o más o 16 con permiso de tus padres")
 print("Fin del programa")
+
+# Ejercicio 2
+# Path: ejerciciosProgramacion/clase.py
