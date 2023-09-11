@@ -9,5 +9,7 @@ else:
 	print("Debes tener 18 años o más o 16 con permiso de tus padres")
 print("Fin del programa")
 
+segundaentrada = "hola"
+
 # Ejercicio 2
 # Path: ejerciciosProgramacion/clase.py
