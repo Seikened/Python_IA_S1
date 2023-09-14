@@ -10,7 +10,7 @@ if __name__ == "__main__":
 	cantidadNumerosIntroducir = int(input("Introduce la cantidad de números que quieres introducir: "))
 	numeros = []
 	for i in range(cantidadNumerosIntroducir):
-		numero = int(input("Introduce un número: "))
+		numero = float(input("Introduce un número: "))
 		numeros.append(numero)
 	print(f"El número mayor es: {numeroMayorDeTres(*numeros)}")
 
