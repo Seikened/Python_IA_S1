@@ -35,3 +35,9 @@ if __name__ == "__main__":
 	mesNacimiento = int(input("Introduce tu mes de nacimiento: "))
 	diaNacimiento = int(input("Introduce tu día de nacimiento: "))
 	print(f"Tu signo es {signoZodiacal(mesNacimiento, diaNacimiento)}")
+
+
+# Pequeño truco
+# fecha = mesNacimiento * 100 + diaNacimiento
+# if (fecha >= 321 and fecha <= 419):
+#   signo = "Aries"

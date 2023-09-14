@@ -16,3 +16,9 @@ if __name__ == "__main__": # para que no se me confundan chavos esto es
 		numeros.append(numero)
 	print(f"El número mayor es: {numeroMayorDeTres(*numeros)}")
 
+#  Esto es se debe hacer es:
+# numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# mayor = max(numeros)
+# menor = min(numeros)
+# promedio = sum(numeros) / len(numeros)
+# print(mayor)
