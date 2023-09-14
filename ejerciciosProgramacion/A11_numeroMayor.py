@@ -10,4 +10,4 @@ def numeroMayor(primerValor, segundoValor):
 if __name__ == "__main__":
 	primerValor = float(input("Ingresa el primer valor: "))
 	segundoValor = float(input("Ingresa el segundo valor: "))
-	print(f"El valor mayor es {numeroMayor(primerValor, segundoValor)}")
+	print(f"El numero mayor es: {numeroMayor(primerValor, segundoValor)}")
