@@ -12,5 +12,5 @@ if __name__ == "__main__":
 	for i in range(cantidadNumerosIntroducir):
 		numero = int(input("Introduce un número: "))
 		numeros.append(numero)
-	print("El número mayor es: ", numeroMayorDeTres(*numeros))
+	print(f"El número mayor es: {numeroMayorDeTres(*numeros)}")
 
