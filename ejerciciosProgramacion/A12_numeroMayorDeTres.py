@@ -6,7 +6,9 @@ def numeroMayorDeTres(*numeros):
 	return numeroMayor
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": # para que no se me confundan chavos esto es
+						#    solo para comprbar que el programa funcione cuando se ejecute este archivo
+
 	cantidadNumerosIntroducir = int(input("Introduce la cantidad de números que quieres introducir: "))
 	numeros = []
 	for i in range(cantidadNumerosIntroducir):
