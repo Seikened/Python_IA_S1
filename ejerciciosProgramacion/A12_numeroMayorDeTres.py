@@ -1,14 +1,16 @@
-def numeroMayorDeTres(a, b, c):
-	numeroMayor = a
-	if b > numeroMayor:
-		numeroMayor = b
-	if c > numeroMayor:
-		numeroMayor = c
+def numeroMayorDeTres(*numeros):
+	numeroMayor = numeros[0]
+	for numero in numeros:
+		if numero > numeroMayor:
+			numeroMayor = numero
 	return numeroMayor
 
 
 if __name__ == "__main__":
-	a = float(input("Escribe el primer número: "))
-	b = float(input("Escribe el segundo número: "))
-	c = float(input("Escribe el tercero número: "))
-	print(f"El número mayor es {numeroMayorDeTres(a, b, c)}")
+	cantidadNumerosIntroducir = int(input("Introduce la cantidad de números que quieres introducir: "))
+	numeros = []
+	for i in range(cantidadNumerosIntroducir):
+		numero = int(input("Introduce un número: "))
+		numeros.append(numero)
+	print("El número mayor es: ", numeroMayorDeTres(*numeros))
+
