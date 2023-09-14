@@ -20,8 +20,7 @@ def distribucionPoissonAcumulada(lambdaVariable, max_numeroOcurrencias):
 	return probabilidad_acumulada
 
 
-lambdaUser = float(input("Ingrese el valor de lambda: "))
-numeroOcurrenciasUser = int(input("Ingrese el valor de numero maximo de ocurrencias: "))
-
 if __name__ == '__main__':
+	lambdaUser = float(input("Ingrese el valor de lambda: "))
+	numeroOcurrenciasUser = int(input("Ingrese el valor de numero maximo de ocurrencias: "))
 	print(f"La probabilidad acumulada de Poisson es: {distribucionPoissonAcumulada(lambdaUser, numeroOcurrenciasUser)}")

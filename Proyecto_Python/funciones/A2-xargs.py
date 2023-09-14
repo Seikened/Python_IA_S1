@@ -1,6 +1,3 @@
-
-
-
 def suma(*numeros):
 	resultado = 0
 	for numero in numeros:
