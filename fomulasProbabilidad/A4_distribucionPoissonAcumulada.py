@@ -1,5 +1,6 @@
 from A3_distribucionPoisson import distribucionPoisson
 
+
 # Nueva función para calcular la probabilidad acumulada en la distribución de Poisson
 def distribucionPoissonAcumulada(lambdaVariable, max_numeroOcurrencias):
 	probabilidad_acumulada = 0.0
@@ -18,4 +19,5 @@ if __name__ == '__main__':
 	elif tipoFuncion == 'A':
 		lambdaUser = float(input("Ingrese el valor de lambda: "))
 		numeroOcurrenciasUser = int(input("Ingrese el valor máximo de numero de ocurrencias: "))
-		print(f"La probabilidad acumulada de Poisson es: {distribucionPoissonAcumulada(lambdaUser, numeroOcurrenciasUser)}")
+		print(
+			f"La probabilidad acumulada de Poisson es: {distribucionPoissonAcumulada(lambdaUser, numeroOcurrenciasUser)}")

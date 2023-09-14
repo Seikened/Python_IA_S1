@@ -12,6 +12,6 @@ for i in range(len([j])):
 		posicionA = a[i][k]
 		posisionB = b[k][i]
 		print(f" Posicion a: {posicionA} posicion b: {posisionB}")
-		c+=  posicionA*posisionB
+		c += posicionA * posisionB
 		print(f"Resultado de c: {c}")
 	print(f"valor de iteración {i} y {c}")

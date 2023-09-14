@@ -24,7 +24,6 @@ def normal(x, mu, sigma):
 	plt.show()
 
 
-
 x = float(input("Ingrese el valor de x: "))
 mu = float(input("Ingrese el valor de mu: "))
 sigma = float(input("Ingrese el valor de sigma: "))

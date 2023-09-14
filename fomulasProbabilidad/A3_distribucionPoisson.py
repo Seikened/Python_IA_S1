@@ -12,8 +12,6 @@ def distribucionPoisson(lambdaVariable, numeroOcurrencias):
 	return distribucionPoisson
 
 
-
-
 if __name__ == '__main__':
 	print(f"La distribucion de poisson es: {distribucionPoisson(lambdaUser, numeroOcurrenciasUser)}")
 	lambdaUser = float(input("Ingrese el valor de lambda: "))
