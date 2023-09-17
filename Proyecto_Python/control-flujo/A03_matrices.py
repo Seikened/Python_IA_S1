@@ -1,17 +1,19 @@
-a = [[2, 16],
-     [3, 11]]
-b = [[2, 16],
-     [3, 11]]
-c = 0
-i = 0
-j = 0
+a = [[1, 0, -1, 1],
+     [2, 1, -3, 4],
+     [-2, 1, 4, 6],
+     [0, 2, 3, 5]]
 
-for i in range(len([j])):
-	c = 0
-	for k in range(len(a[i])):
-		posicionA = a[i][k]
-		posisionB = b[k][i]
-		print(f" Posicion a: {posicionA} posicion b: {posisionB}")
-		c += posicionA * posisionB
-		print(f"Resultado de c: {c}")
-	print(f"valor de iteración {i} y {c}")
+b = [[2, 4, 1, 6],
+     [3, 0, -2, 5],
+     [2, 1, -1, 0],
+     [-2, -4, 1, 3]]
+
+c = [[0 for _ in range(len(b[0]))] for _ in range(len(a))]
+
+for i in range(len(a)):
+	for j in range(len(b[0])):
+		for k in range(len(a[0])):
+			posicionA = a[i][k]
+			posisionB = b[k][j]
+			c[i][j] += posicionA * posisionB
+	print(f"valor de iteración  y {c}")
