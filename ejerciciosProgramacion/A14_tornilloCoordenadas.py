@@ -4,7 +4,7 @@ def calcular_xy(c_x, c_y):
 	y = (c_y - 2.5) // 15
 	# Despeje de n
 	n = (y * 8) + x
-	print(f"El numeroObtener es: {n}")
+	print(f"El numero a obtener es: {n}")
 	return n
 
 
