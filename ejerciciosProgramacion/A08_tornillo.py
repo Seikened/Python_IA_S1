@@ -1,8 +1,8 @@
-def calcularTornillo(posicion, distanciaConstante=15):
-	posicion = (posicion * distanciaConstante) + 7.5
-	return posicion
+def calcularTornillo(entradaTornillo, distanciaConstante=15):
+	x_mm = (entradaTornillo * distanciaConstante) + 7.5
+	return x_mm
 
 
-entrada = int(input("Ingrese la posicion del tornillo: "))
+entradaTornillo = int(input("Ingrese la posicion del tornillo: "))
 if __name__ == "__main__":
-	print(f"La posicion del tornillo es: {calcularTornillo(entrada)}")
+	print(f"La posicion del tornillo es: {calcularTornillo(entradaTornillo)}")

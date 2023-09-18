@@ -12,6 +12,6 @@ def calcular_coordenadas_tornillo_corregido(numero_tornillo):
 	return posicion_x, posicion_y
 
 
-entradaUser = int(input("Ingrese la posicion del tornillo: "))
-x, y = calcular_coordenadas_tornillo_corregido(entradaUser)
-print(f"Para el tornillo 🔹{entradaUser}🔹 las coordenadas de X es: {x} | Y es: {y}")
+entradaUserTornillo = int(input("Ingrese la posicion del tornillo: "))
+x, y = calcular_coordenadas_tornillo_corregido(entradaUserTornillo)
+print(f"Para el tornillo 🔹{entradaUserTornillo}🔹 las coordenadas de X es: {x} | Y es: {y}")
