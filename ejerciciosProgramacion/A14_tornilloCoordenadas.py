@@ -7,4 +7,3 @@ n = (renglon * 8) + columna
 resultado = int(n)
 
 print(f"""Para la coordenana de columna: 🔹{c_x_mm}🔹 y las de renglon: 🔹{c_y_mm}🔹El tornillo buiscado es: {resultado}""")
-
