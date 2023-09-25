@@ -9,5 +9,3 @@ print(primer ^ segundo)  # Diferencia simétrica
 
 if 5 in segundo:
 	print("Si esta")
-
-
