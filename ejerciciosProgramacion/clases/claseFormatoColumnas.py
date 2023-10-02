@@ -1,9 +1,12 @@
 # Busqueda exahustiva
 
 # resolver x para x**3+x = 100
-
+print("      x     |    Lado Izq.")
+print("------------|----------------")
 x = 4
-while (x < 5):
+ladoDer = 100
+ladoIzquierdo = x ** 3 + x
+while (ladoIzquierdo < ladoDer):
 	ladoIzquierdo = x ** 3 + x
-	print("x: %10.4f, Lado izquierdo: %10.4f" % (x, ladoIzquierdo))
-	x += .01
+	print(" %10.5f | %10.5f" % (x, ladoIzquierdo))
+	x += .00001
