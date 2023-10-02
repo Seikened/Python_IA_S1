@@ -8,6 +8,7 @@
 
 import os
 
+
 def calculoTiempo(tiempo):
 	# Tiempo en segundos desde la época
 	tiempo_epoch = tiempo
@@ -26,7 +27,7 @@ def calculoTiempo(tiempo):
 	# Ajustar para la época (1970)
 	anios += 1970
 
-	return anios,dias,horas,minutos,segundos
+	return anios, dias, horas, minutos, segundos
 
 
 carpetaC1 = "c1"
@@ -35,30 +36,28 @@ carpetaC2 = "c2"
 # Crear un directorio llamado c1 y su verificación
 nombreDirectorio = "c1"
 os.makedirs(nombreDirectorio, exist_ok=True)
-rutaC1 = os.path.join(os.getcwd(),nombreDirectorio)
+rutaC1 = os.path.join(os.getcwd(), nombreDirectorio)
 
 if os.path.exists(nombreDirectorio):
 	print(f"Se creo correcramente {nombreDirectorio}")
 
 else:
 	print(f"No se creo correcramente {nombreDirectorio} intentalo nuevamente")
-
 
 # Crear un directorio llamado c2 y su verificación
 nombreDirectorio = "c2"
 os.makedirs(nombreDirectorio, exist_ok=True)
-rutaC2 = os.path.join(os.getcwd(),nombreDirectorio)
+rutaC2 = os.path.join(os.getcwd(), nombreDirectorio)
 
 if os.path.exists(nombreDirectorio):
 	print(f"Se creo correcramente {nombreDirectorio}")
 else:
 	print(f"No se creo correcramente {nombreDirectorio} intentalo nuevamente")
 
-
 # Crear un archivo de texto archivo_c1.txt y en el excribe "Este es un archivo de texto de c1"
-	# Y este debe estar guardado en el "c1"
+# Y este debe estar guardado en el "c1"
 nombreArchivo = "archivo_c1.txt"
-rutaArchivoC1 = os.path.join(rutaC1,nombreArchivo)
+rutaArchivoC1 = os.path.join(rutaC1, nombreArchivo)
 # Documents/Practica02/c1/archivo_c1.txt
 
 if os.path.exists(rutaArchivoC1):
@@ -68,11 +67,10 @@ else:
 	with open(rutaArchivoC1, "w") as f:
 		f.write("ESTE ES UN ARCHIVO DE TEXTO DE C1")
 
-
 # Crear un archivo de texto archivo_c2.txt y en el excribe "Este es un archivo de texto de c2"
-	# Y este debe estar guardado en el "c2"
+# Y este debe estar guardado en el "c2"
 nombreArchivo = "archivo_c2.txt"
-rutaArchivoC2 = os.path.join(rutaC2,nombreArchivo)
+rutaArchivoC2 = os.path.join(rutaC2, nombreArchivo)
 # Documents/Practica02/c2/archivo_c2.txt
 
 if os.path.exists(rutaArchivoC2):
@@ -81,7 +79,6 @@ else:
 	print(f"El archivo se creo correctamente {nombreArchivo} ")
 	with open(rutaArchivoC2, "w") as f:
 		f.write("ESTE ES UN ARCHIVO DE TEXTO DE C2")
-
 
 # Obtener el directorio actual
 directorio = os.getcwd()
@@ -105,7 +102,7 @@ else:
 # Manejo de archivos
 
 # Crear un archivo de texto README.txt y en el excribe "Este es un archivo README"
-	# Y este debe estar guardado en el "modules"
+# Y este debe estar guardado en el "modules"
 
 # Nos movemos de ruta
 rutaModules = os.path.join(directorio, nombreDirectorio)
@@ -113,7 +110,7 @@ os.chdir(rutaModules)
 
 # Creación de archivo
 nombreArchivo = "README.txt"
-rutaReadme = os.path.join(os.getcwd(),nombreArchivo)
+rutaReadme = os.path.join(os.getcwd(), nombreArchivo)
 # Documents/Practica02/modules/README.txt
 
 if os.path.exists(rutaReadme):
@@ -124,10 +121,6 @@ else:
 	print(f"El archivo se creo correctamente {nombreArchivo} ")
 	with open(nombreArchivo, "w") as f:
 		f.write("ESTE ES UN ARCHIVO README")
-
-
-
-
 
 # Muestra la información detallada sobre el archivo
 mostarInfor = os.stat(rutaReadme)
@@ -142,23 +135,22 @@ Fecha de modificación: {fechaModificacion}
 os.chdir('..')
 directorio = os.getcwd()
 print("El directorio actual es: ", directorio)
-rutaC1Origen = os.path.join(directorio, os.path.join(carpetaC1,"archivo_c1.txt"))
+rutaC1Origen = os.path.join(directorio, os.path.join(carpetaC1, "archivo_c1.txt"))
 print("El directorio actual es: ", rutaC1Origen)
-rutaC1Destino = os.path.join(rutaModules,"archivo_c1.txt")
+rutaC1Destino = os.path.join(rutaModules, "archivo_c1.txt")
 print("El directorio actual es: ", rutaC1Destino)
 
 # Ruta origen y destino de C2
-rutaC2Origen = os.path.join(directorio, os.path.join(carpetaC2,"archivo_c2.txt"))
+rutaC2Origen = os.path.join(directorio, os.path.join(carpetaC2, "archivo_c2.txt"))
 print("El directorio actual es: ", rutaC2Origen)
-rutaC2Destino = os.path.join(rutaModules,"archivo_c2.txt")
+rutaC2Destino = os.path.join(rutaModules, "archivo_c2.txt")
 print("El directorio actual es: ", rutaC2Destino)
-
 
 # Mover los archivos de C1
 
 with open(rutaC1Origen, 'rb') as f_origen:
-    with open(rutaC1Destino, 'wb') as f_destino:
-        f_destino.write(f_origen.read())
+	with open(rutaC1Destino, 'wb') as f_destino:
+		f_destino.write(f_origen.read())
 
 # Mover los archivos de C2
 
@@ -179,7 +171,6 @@ if os.path.exists(rutaC2Destino):
 else:
 	print("No se pudo renombrar el archivo")
 
-
 listaDeC1 = os.listdir(os.path.join(directorio, carpetaC1))
 print("Los archivos del directorio son: ", listaDeC1)
 listaDeC2 = os.listdir(os.path.join(directorio, carpetaC2))
@@ -188,9 +179,9 @@ print("Los archivos del directorio son: ", listaDeC2)
 # Listar todos los archivos de un directorio de C1
 for archivo in listaDeC1:
 	print("El archivo a eliminar es: ", archivo)
-	os.remove(os.path.join(directorio, os.path.join(carpetaC1,archivo)))
+	os.remove(os.path.join(directorio, os.path.join(carpetaC1, archivo)))
 
 # Listar todos los archivos de un directorio de C2
 for archivo in listaDeC2:
 	print("El archivo a eliminar es: ", archivo)
-	os.remove(os.path.join(directorio, os.path.join(carpetaC2,archivo)))
+	os.remove(os.path.join(directorio, os.path.join(carpetaC2, archivo)))
