@@ -46,9 +46,7 @@ while respuesta == "s":
 	else:
 		print("Perdiste")
 		respuesta = input("¿Desea seguir jugando? (s/n): ")
-		apuesta = int(input("Ingrese su apuesta: ")) # esto sirve para que el usuario pueda apostar de nuevo
-
-
+		apuesta = int(input("Ingrese su apuesta: "))  # esto sirve para que el usuario pueda apostar de nuevo
 
 # no puedes apoar mas de lo que tienes
 # si ya no tienes dinero te tienes que salir del casino
