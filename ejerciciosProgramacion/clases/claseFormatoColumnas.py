@@ -29,25 +29,59 @@
 import random
 
 # Primero tengo que generar dados
+montoApuesta = 0
+creditoInicial = 100
+print(f"""
+Bienvenido al casino!
+Tendrás un primer tiro de prueba para que te 
+familiarices con el juego.
+
+Tu crédito inicial es: {creditoInicial}
+Y tu monto de apuesta es: {montoApuesta} 
+esta en 0 por que aun no haz apostado.
+
+Después de tu primer tiro empezarás a apostar
+-------------------------------------------------
+La mecanica es que ocupas poner un número 
+Entre 2 y 12 y si aciertas se sumara el monto de tu apuesta a tu crédito
+
+""")
+
 respuesta = "s"
 while respuesta == "s":
+
+	if creditoInicial == 0:
+		print("Ya no tienes más créditos para jugar 🚫")
+		break
+
 	dadoUno = random.randint(1, 6)
 	dadoDos = random.randint(1, 6)
-	print(f"Dado uno: {dadoUno} y Dado dos: {dadoDos}")
-	creditoInicial = 100
-
-	# Segundo preguntar por el número  e indentificar si gana o pierde
-	sumaApuesta = int(input("Ingrese un número entre 2 y 12: "))
 	sumaDados = dadoUno + dadoDos
-	if sumaApuesta == sumaDados:
-		print("Ganaste")
-		respuesta = input("¿Desea seguir jugando? (s/n): ")
-		apuesta = int(input("Ingrese su apuesta: "))
-	else:
-		print("Perdiste")
-		respuesta = input("¿Desea seguir jugando? (s/n): ")
-		apuesta = int(input("Ingrese su apuesta: "))  # esto sirve para que el usuario pueda apostar de nuevo
 
-# no puedes apoar mas de lo que tienes
-# si ya no tienes dinero te tienes que salir del casino
-# Jugador tiene que tener la opcion de salir en cualquier momento
+	print(f"Dado uno: {dadoUno} y Dado dos: {dadoDos} el resultado es {sumaDados}")
+	sumaApuesta = int(input("Ingrese un número entre 2 y 12: "))
+
+
+	if sumaApuesta == sumaDados:
+		creditoInicial += montoApuesta
+		print(f"En hora buena le haz atinado🎉")
+		if montoApuesta != 0:
+			print(f"Obtuviste🎉 {montoApuesta} y tienes {creditoInicial} créditos acumulados")
+	else:
+		creditoInicial -= montoApuesta
+		print(f"Oh rayos 🥺 no le acertaste")
+		if montoApuesta != 0:
+			print(f"Perdiste🎉 {montoApuesta} y tienes {creditoInicial} créditos acumulados")
+		if creditoInicial == 0:
+			print("Ya no tienes más créditos para jugar 🚫")
+			break
+
+
+	respuesta = input("¿Desea seguir jugando? (s/n): ").lower()
+
+	montoApuesta = int(input("Ingrese su apuesta: "))
+	while montoApuesta > creditoInicial:
+		montoApuesta = int(input(f"Ingresa un valor mejor a {creditoInicial}: "))
+
+print("Fin del juego")
+
