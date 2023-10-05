@@ -13,13 +13,13 @@ alturaOriginal_m = 5
 velocidadOriginal_m_s = 10
 aceleracion_s_s2 = -9.81
 tiempo = 0
-alturaObjeto = 5
+alturaObjeto_m = 5
 
 print(" Tiempo  |   Altura de Y")
 print("---------|---------------")
 
-while (alturaObjeto >= 0):
-	alturaObjeto = alturaOriginal_m + (velocidadOriginal_m_s * tiempo) + ((.5 * aceleracion_s_s2) * (tiempo ** 2))
-	print(" %6.2f  | %6.2f" % (tiempo, alturaObjeto))
+while (alturaObjeto_m >= 0):
+	alturaObjeto_m = alturaOriginal_m + (velocidadOriginal_m_s * tiempo) + ((.5 * aceleracion_s_s2) * (tiempo ** 2))
+	print(" %6.2f  | %6.2f" % (tiempo, alturaObjeto_m))
 	tiempo += 0.1
 print("Toco el piso")
