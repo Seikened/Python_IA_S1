@@ -67,20 +67,23 @@ while respuesta == "s":
 		creditoInicial += montoApuesta
 		print(f"En hora buena le haz atinado🎉")
 		if montoApuesta != 0:
-			print(f"Obtuviste🎉 {montoApuesta} y tienes {creditoInicial} créditos acumulados")
+			print(f"Obtuviste🎉 ${montoApuesta}")
 	else:
 		creditoInicial -= montoApuesta
 		print(f"Oh rayos 🥺 no le acertaste, salio {sumaDados}")
 		if montoApuesta != 0:
-			print(f"Perdiste🎉 {montoApuesta} y tienes {creditoInicial} créditos acumulados")
+			print(f"Perdiste🎉 ${montoApuesta}")
 		if creditoInicial == 0:
 			print("Ya no tienes más créditos para jugar 🚫")
 			break
 
+	print(f"Tu crédito es ${creditoInicial}")
 	respuesta = input("¿Desea seguir jugando? (s/n): ").lower()
+	if respuesta == "n":
+		break
 
-	montoApuesta = int(input("Ingrese su apuesta: "))
-	while montoApuesta > creditoInicial:
-		montoApuesta = int(input(f"Ingresa un valor mejor a {creditoInicial}: "))
+	montoApuesta = float(input("Ingrese su apuesta: "))
+	while montoApuesta < 0 or montoApuesta > creditoInicial:
+		montoApuesta = int(input(f"Ingresa un valor entre 0 y {creditoInicial}: "))
 
 print("Fin del juego")
