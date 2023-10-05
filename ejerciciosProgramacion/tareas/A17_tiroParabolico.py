@@ -13,7 +13,7 @@ alturaOriginal_m = 5
 velocidadOriginal_m_s = 10
 aceleracion_s_s2 = -9.81
 tiempo = 0
-alturaObjeto = 1
+alturaObjeto = 5
 
 print(" Tiempo  |   Altura de Y")
 print("---------|---------------")
