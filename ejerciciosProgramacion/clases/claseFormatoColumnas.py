@@ -61,7 +61,6 @@ while respuesta == "s":
 	print(f"Dado uno: {dadoUno} y Dado dos: {dadoDos} el resultado es {sumaDados}")
 	sumaApuesta = int(input("Ingrese un número entre 2 y 12: "))
 
-
 	if sumaApuesta == sumaDados:
 		creditoInicial += montoApuesta
 		print(f"En hora buena le haz atinado🎉")
@@ -76,7 +75,6 @@ while respuesta == "s":
 			print("Ya no tienes más créditos para jugar 🚫")
 			break
 
-
 	respuesta = input("¿Desea seguir jugando? (s/n): ").lower()
 
 	montoApuesta = int(input("Ingrese su apuesta: "))
@@ -84,4 +82,3 @@ while respuesta == "s":
 		montoApuesta = int(input(f"Ingresa un valor mejor a {creditoInicial}: "))
 
 print("Fin del juego")
-
