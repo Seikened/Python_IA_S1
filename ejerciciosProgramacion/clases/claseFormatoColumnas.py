@@ -84,3 +84,4 @@ while respuesta == "s":
 		montoApuesta = int(input(f"Ingresa un valor mejor a {creditoInicial}: "))
 
 print("Fin del juego")
+
