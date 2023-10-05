@@ -59,7 +59,9 @@ while respuesta == "s":
 	sumaDados = dadoUno + dadoDos
 
 	print(f"Dado uno: {dadoUno} y Dado dos: {dadoDos} el resultado es {sumaDados}")
-	sumaApuesta = int(input("Ingrese un número entre 2 y 12: "))
+	sumaApuesta = -1
+	while sumaApuesta < 2 or sumaApuesta > 12:
+		sumaApuesta = int(input("Ingrese un número entre 2 y 12: "))
 
 	if sumaApuesta == sumaDados:
 		creditoInicial += montoApuesta
@@ -68,7 +70,7 @@ while respuesta == "s":
 			print(f"Obtuviste🎉 {montoApuesta} y tienes {creditoInicial} créditos acumulados")
 	else:
 		creditoInicial -= montoApuesta
-		print(f"Oh rayos 🥺 no le acertaste")
+		print(f"Oh rayos 🥺 no le acertaste, salio {sumaDados}")
 		if montoApuesta != 0:
 			print(f"Perdiste🎉 {montoApuesta} y tienes {creditoInicial} créditos acumulados")
 		if creditoInicial == 0:

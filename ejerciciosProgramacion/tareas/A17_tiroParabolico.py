@@ -15,7 +15,7 @@ aceleracion_s_s2 = -9.81
 tiempo = 0
 alturaObjeto_m = 5
 
-print(" Tiempo  |   Altura de Y")
+print("Tiempo[s]|Altura de Y[s]")
 print("---------|---------------")
 
 while (alturaObjeto_m >= 0):
