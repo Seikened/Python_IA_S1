@@ -1,34 +1,7 @@
-# Busqueda exahustiva
-
-# resolver x para x**3+x = 100
-# print("      x     |    Lado Izq.")
-# print("------------|----------------")
-# x = 4
-# ladoDer = 100
-# ladoIzquierdo = x ** 3 + x
-# while (ladoIzquierdo < ladoDer):
-# 	ladoIzquierdo = x ** 3 + x
-# 	print(" %10.5f | %10.5f" % (x, ladoIzquierdo))
-# 	x += .00001
-
-
-# Casino
-# Tener credito inicial
-# Apostar
-# Si gana, se le suma el doble de lo apostado
-# Si pierde, se le resta lo apostado
-# Si se queda sin credito, se le da la opcion de salir
-# Puede salir en cualquier momento
-
-# Primero tengo que generar dados
-# Segundo preguntar por el número  e indentificar si gana o pierde
-# Tercero preguntar si quiere seguir jugando
-# Cuarto Voy a agregar el crédito y apuestas
-# cuatro punto 1: Aqui hay varias reglas de casino y reglas de juego
-
 import random
 
 # Primero tengo que generar dados
+
 montoApuesta = 0
 creditoInicial = 100
 print(f"""
@@ -42,7 +15,7 @@ esta en 0 por que aun no haz apostado.
 
 Después de tu primer tiro empezarás a apostar
 -------------------------------------------------
-La mecanica es que ocupas poner un número 
+La mecánica es que ocupas poner un número 
 Entre 2 y 12 y si aciertas se sumara el monto de tu apuesta a tu crédito
 
 """)

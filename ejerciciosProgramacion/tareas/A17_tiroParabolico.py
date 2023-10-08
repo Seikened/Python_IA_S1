@@ -1,6 +1,7 @@
 # 3.- Considere un ejemplo de tiro parabólico donde
 # y = yo + vo ⋅ t + 1 a ⋅ t 2 , 2
-# donde y es la altura del objeto, yo es la altura original (5 metros), vo es la velocidad original (10 m/s), a es la aceleración de la gravedad (-9.81 m/s2), y t es el tiempo. El nivel del piso se alcanza cuando y es igual a cero.
+# donde y es la altura del objeto, yo es la altura original (5 metros), vo es la velocidad original (10 m/s), 
+# a es la aceleración de la gravedad (-9.81 m/s2), y t es el tiempo. El nivel del piso se alcanza cuando y es igual a cero.
 # Escriba un programa que muestre en una tabla la altura y como función del tiempo t, desde el momento t = 0 s hasta que el objeto alcance una altura y = 0 m.
 # La tabla se debería ver como lo que sigue:
 # Notas:

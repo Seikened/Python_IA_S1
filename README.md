@@ -2,4 +2,4 @@
 
 - Proyecto de Inteligencia Artificial
 - Semestre 1
-- Python
+- Pythonspo
