@@ -3,7 +3,7 @@ print(numeros)
 
 punto = tuple([1, 2])
 print(punto)
-menosNumeros = numeros[:2]
+menosNumeros = numeros[:2] # Esto es un slice
 print(menosNumeros)
 primero, segundo, *otros = numeros
 print(primero)
@@ -13,5 +13,5 @@ for n in numeros:
 	print(n)
 
 listaNumeros = list(numeros)
-listaNumeros[0] = "Hola"
+listaNumeros[0] = "Hola"  # type: ignore
 print(listaNumeros)

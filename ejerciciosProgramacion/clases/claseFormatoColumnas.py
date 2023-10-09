@@ -1,6 +1,5 @@
 import random
 
-# Primero tengo que generar dados
 
 montoApuesta = 0
 creditoInicial = 100
