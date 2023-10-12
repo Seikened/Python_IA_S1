@@ -13,11 +13,9 @@ print(f"Tu lista es: {listaNumerosFlotantes}")
 
 
 for numero in listaNumerosFlotantes:
-    if numero > numeroMayor:
-        numeroMayor = numero
-
-    if numero < numeroMenor:
-        numeroMenor = numero
+    if numero > numeroMayor: numeroMayor = numero
+    if numero < numeroMenor:numeroMenor = numero
+    
 print(f"""
 El menor de tus números es: {numeroMenor}
 El mayor de tus núemros es: {numeroMayor}
