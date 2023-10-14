@@ -6,11 +6,11 @@ def numeroMatriz():
 
 while True:
      # Matríz a
-     columnasA = 3 #int(input("Cuantas colunmas de la matríz a: "))
-     renglonesA = 3 #int(input("Cuantos renglones de la matríz a: "))
+     columnasA =  int(input("Cuantas colunmas de la matríz a: "))
+     renglonesA =  int(input("Cuantos renglones de la matríz a: "))
      # Matríz b
-     columnasB = 3 #int(input("Cuantas colunmas de la matríz b: "))
-     renglonesB = 3 #int(input("Cuantos renglones de la matríz b: "))
+     columnasB = int(input("Cuantas colunmas de la matríz b: "))
+     renglonesB = int(input("Cuantos renglones de la matríz b: "))
      if columnasA == renglonesB:
           break
 
