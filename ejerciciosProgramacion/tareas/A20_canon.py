@@ -24,21 +24,35 @@ print("\n")
 # Verificar que exista el mayor y los disparos angulos son resultados similares
 distanciaMayor = 0
 anguloMayor = 0 
-angulosIguales = []
-distanciasIguales = []
-numero_de_vecesDistancia = [
 
-for distancia,angulo in zip(distanicaMisilVector,anguloVector): # La función zip() me permite iterar 2 vectores al mismo tiempo ya que tienen el mismo tamaño me conviene
+# Verificación de angulos iguales dentro del vector dando que dos angulos pueden dar la misma distancia
+numero_de_vecesDistancia = []
+
+for i, (distancia, angulo) in enumerate(zip(distanicaMisilVector, anguloVector)):
+    
     if distanciaMayor < distancia:
         distanciaMayor = distancia
         anguloMayor = angulo
-    # Verificación de angulos iguales
-    if angulo in anguloVector:
-        
 
+    # Creamos la nueva entrada dentro del bucle para que tome los valores actuales
+    nueva_entrada = {
+        "posicion": i,
+        "angulo": angulo,
+        "distancia": distancia  # Usamos la variable del bucle
+    }
+    
+    # Verificar si la distancia ya existe en el diccionario
+    distancias_existentes = [x["distancia"] for x in numero_de_vecesDistancia]
+    if distancia in distancias_existentes:
+        print(f"La distancia {distancia} ya existe para otro ángulo.")
+    else:
+        # Si no existe, añadimos la nueva entrada al diccionario
+        numero_de_vecesDistancia.append(nueva_entrada)
+
+    
 print(f"El mejor angulo del cañon desde: {anguloVector[0]} hasta: {anguloVector[-1]} es el angulo {anguloMayor}")
 
-# Verificamos cuales angulos obtienen el mismo resultado
+
 
 
 
