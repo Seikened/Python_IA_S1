@@ -2,6 +2,8 @@ import math as mt
 import matplotlib.pyplot as plt
 
 
+
+
 pi = mt.pi
 velocidadInicial_m_s = 400
 aceleracion_m_s2 = -9.81
@@ -11,7 +13,8 @@ anguloVector = [0 for _ in range(19)]
 
 print("\n  Angulo   |  Distancia del cañon")
 print("-----------|--------------")
-
+gradoDerecho = 0
+listaGradoDerecho = []
 for i,angulo in enumerate(range(0,91,5)):
     radianes = (pi * angulo) / 180
     distanicaMisil = ((-2 * (velocidadInicial_m_s**2) ) * (mt.cos(radianes) * mt.sin(radianes))) / aceleracion_m_s2
@@ -21,13 +24,14 @@ for i,angulo in enumerate(range(0,91,5)):
     
 print("\n")
 
+
 # Verificar que exista el mayor y los disparos angulos son resultados similares
 distanciaMayor = 0
 anguloMayor = 0 
 
 # Verificación de angulos iguales dentro del vector dando que dos angulos pueden dar la misma distancia
 numero_de_vecesDistancia = []
-
+nueva_entrada = {}
 for i, (distancia, angulo) in enumerate(zip(distanicaMisilVector, anguloVector)):
     
     if distanciaMayor < distancia:
@@ -49,11 +53,8 @@ for i, (distancia, angulo) in enumerate(zip(distanicaMisilVector, anguloVector))
         # Si no existe, añadimos la nueva entrada al diccionario
         numero_de_vecesDistancia.append(nueva_entrada)
 
-    
+print(numero_de_vecesDistancia)
 print(f"El mejor angulo del cañon desde: {anguloVector[0]} hasta: {anguloVector[-1]} es el angulo {anguloMayor}")
-
-
-
 
 
 plt.plot(anguloVector,distanicaMisilVector, color="#11d1dd", linestyle="--", marker="o", label=" Distancia del cañon") 
