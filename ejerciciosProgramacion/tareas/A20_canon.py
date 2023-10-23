@@ -13,6 +13,7 @@ anguloVector = [0 for _ in range(19)]
 
 print("\n  Angulo   |  Distancia del cañon")
 print("-----------|--------------")
+
 gradoDerecho = 0
 listaGradoDerecho = []
 for i,angulo in enumerate(range(0,91,5)):
@@ -20,8 +21,8 @@ for i,angulo in enumerate(range(0,91,5)):
     distanicaMisil = ((-2 * (velocidadInicial_m_s**2) ) * (mt.cos(radianes) * mt.sin(radianes))) / aceleracion_m_s2
     print("%10.2f | %10.2f" % (angulo,distanicaMisil))
     distanicaMisilVector[i] = distanicaMisil # type: ignore
-    anguloVector[i] = angulo
-    
+    anguloVector[i] = angulo    
+
 print("\n")
 
 
@@ -30,8 +31,8 @@ distanciaMayor = 0
 anguloMayor = 0 
 
 # Verificación de angulos iguales dentro del vector dando que dos angulos pueden dar la misma distancia
-numero_de_vecesDistancia = []
-nueva_entrada = {}
+numeroDeVecesDistancia = []
+nuevaEntrada = {}
 for i, (distancia, angulo) in enumerate(zip(distanicaMisilVector, anguloVector)):
     
     if distanciaMayor < distancia:
@@ -39,21 +40,21 @@ for i, (distancia, angulo) in enumerate(zip(distanicaMisilVector, anguloVector))
         anguloMayor = angulo
 
     # Creamos la nueva entrada dentro del bucle para que tome los valores actuales
-    nueva_entrada = {
+    nuevaEntrada = {
         "posicion": i,
         "angulo": angulo,
         "distancia": distancia  # Usamos la variable del bucle
     }
     
     # Verificar si la distancia ya existe en el diccionario
-    distancias_existentes = [x["distancia"] for x in numero_de_vecesDistancia]
+    distancias_existentes = [x["distancia"] for x in numeroDeVecesDistancia]
     if distancia in distancias_existentes:
         print(f"La distancia {distancia} ya existe para otro ángulo.")
     else:
         # Si no existe, añadimos la nueva entrada al diccionario
-        numero_de_vecesDistancia.append(nueva_entrada)
+        numeroDeVecesDistancia.append(nuevaEntrada)
 
-print(numero_de_vecesDistancia)
+print(numeroDeVecesDistancia)
 print(f"El mejor angulo del cañon desde: {anguloVector[0]} hasta: {anguloVector[-1]} es el angulo {anguloMayor}")
 
 
