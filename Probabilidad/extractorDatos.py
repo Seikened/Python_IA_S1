@@ -165,6 +165,13 @@ if pValueMenorQue < significancia:
     print("como la significancia (%3.2f) es mayor que el p-Value (%5.4f), y estamos usando una prueba de cola derecha, H0 se rechaza" %(significancia, pValueMenorQue))
     prueba2 = False #  si es falso, entonces no existe la evidencia suficiente para aceptar H0
 
+margen_error = valorCritico * errorEstandar
+intervalo_confianza = (promedioMuestral, promedioMuestral + margen_error)
+
+
+print(f"📈 Intervalo de confianza del {confianza * 100}% para la media de ventas mensuales: {intervalo_confianza}")
+
+
 # PASO 5 | Tomar la decisión y concluir
 
 if prueba1 is True and prueba2 is True: #  si no se rechaza con valor critico ni con pValue, podemos aceptar H0
