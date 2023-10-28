@@ -13,4 +13,5 @@ print(len(a))
 ultimo = a[len(a)-1]
 print(ultimo)
 
-print("Hola  hola")
+print("Hola  hola") 
+# print(a[7]) # Error
