@@ -2,8 +2,6 @@ import math as mt
 import matplotlib.pyplot as plt
 
 
-
-
 pi = mt.pi
 velocidadInicial_m_s = 400
 aceleracion_m_s2 = -9.81
@@ -67,4 +65,3 @@ plt.legend()
 
 
 plt.show()
-
