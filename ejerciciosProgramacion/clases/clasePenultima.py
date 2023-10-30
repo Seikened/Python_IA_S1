@@ -70,24 +70,28 @@ numeroJugadores = int(input("Cuantos jugadores son: "))
 mesaJugadores = []
 
 
-
-# for numeroJugador in range(numeroJugadores):
-#     nombre = str(input("Cual es tu nombre: "))
-#     credito = int(input("Que crédito tiene: "))
-#     sumaApuesta = int(input("Que numero es al que le apuestas: "))
-#     montoApuesta = int(input("Cual es el monto que aúestas: "))
-#     jugador = [nombre,credito,sumaApuesta,montoApuesta]
-#     mesaJugadores.append(jugador)
-
-# print(mesaJugadores)
 import random
-
+#f"Jugador {numeroJugador}"
 for numeroJugador in range(numeroJugadores):
-    nombre = f"Jugador {numeroJugador}"
+    nombre = input("Cual es tu nombre")
     credito = random.randint(1,250)
     sumaApuesta = random.randint(1,15)
     montoApuesta = random.randint(1,250)
     jugador = [nombre,credito,sumaApuesta,montoApuesta]
     mesaJugadores.append(jugador)
+    
 
-print(mesaJugadores)
+mayorCaracteres = 0
+for index in range(len(mesaJugadores)):
+    esteJuagador = mesaJugadores[index]
+    nombre = esteJuagador[0]
+    credito = esteJuagador[1]
+    sumaApuesta = esteJuagador[2]
+    montoApuesta = esteJuagador[3]
+    
+    if len(nombre) > mayorCaracteres:
+        mayorCaracteres = len(nombre)
+    
+for esteJugador in mesaJugadores:
+    nombre, credito, sumaApuesta, montoApuesta = esteJugador
+    print(f"{nombre:<{mayorCaracteres}} {credito:<10} {sumaApuesta:<15} {montoApuesta:<15}")
