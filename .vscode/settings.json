@@ -10,5 +10,5 @@
   "python.testing.pytestEnabled": true,
   "python.testing.unittestEnabled": true,
   "python.analysis.autoImportCompletions": true,
-  "python.envFile": "/Users/fernandoleon/anaconda3/envs/Test"
+  "python.envFile": "\"python.envFile\": \"${workspaceFolder}/.env\""
 }

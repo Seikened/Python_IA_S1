@@ -83,7 +83,7 @@ mesaJugadores = []
 import random
 
 for numeroJugador in range(numeroJugadores):
-    nombre = F"jugador {numeroJugador}"
+    nombre = f"Jugador {numeroJugador}"
     credito = random.randint(1,250)
     sumaApuesta = random.randint(1,15)
     montoApuesta = random.randint(1,250)
