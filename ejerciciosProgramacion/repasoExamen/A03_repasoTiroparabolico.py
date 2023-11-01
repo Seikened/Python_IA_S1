@@ -11,15 +11,12 @@ listaObjeto = []
 print("Tiempo    |  Altura del objeto")
 print("----------|-------------------")
 
-while  alturaObjeto > 0:
+while  alturaObjeto >= 1.80:
     alturaObjeto = alturaOriginal_m + ( velocidadOriginal_m_s * tiempo_s ) + ( .5 * ( aceleracionGravedad_m_s2 * ( tiempo_s ** 2 ) ) )
-    print("  %6.2f  |   %6.2f" %(tiempo_s, alturaObjeto))
+    print("  %6.3f  |   %6.3f" %(tiempo_s, alturaObjeto))
     listaTiempo.append(tiempo_s)
     listaObjeto.append(alturaObjeto)
-    tiempo_s += .01
-    
-
-
+    tiempo_s += .0001
 
 
 
