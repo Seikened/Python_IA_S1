@@ -7,7 +7,7 @@ from scipy.stats import norm
 
 locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 
-ruta = "/Users/fernandoleon/PycharmProjects/Python_IA_S1/Probabilidad/dataBase.csv"
+ruta = "/Users/fernandoleonfranco/Documents/GitHub/Python_IA_S1/Probabilidad/dataBase.csv"
 
 # Leer los datos del archivo csv
 df = pd.read_csv(ruta)
@@ -32,7 +32,7 @@ indices_a_eliminar = copiaDatos[((copiaDatos['Estado'] == 'pendiente_pago') | (c
 copiaDatos.drop(indices_a_eliminar, inplace=True)
 
 # Guardar el DataFrame modificado como un nuevo archivo CSV
-copiaDatos.to_csv("/Users/fernandoleon/PycharmProjects/Python_IA_S1/Probabilidad/dataBase_modificada.csv", index=False)
+copiaDatos.to_csv("/Users/fernandoleonfranco/Documents/GitHub/Python_IA_S1/Probabilidad/dataBase_modificada.csv", index=False)
 
 # Formatear la columna 'Created At' como fecha
 copiaDatos['Created At'] = pd.to_datetime(copiaDatos['Created At'])
