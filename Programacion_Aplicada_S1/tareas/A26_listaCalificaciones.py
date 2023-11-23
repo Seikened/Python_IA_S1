@@ -1,7 +1,7 @@
 import random
 
 
-def capturaAlumnos(numeroAlumnos):
+def CapturaAlumnos(numeroAlumnos):
     #numeroAlumnos = #int(input("¿Cuantos alumnos registraras? "))
     alumno = []
     miGrupo = []
@@ -16,7 +16,7 @@ def capturaAlumnos(numeroAlumnos):
         miGrupo.append(alumno)
     return miGrupo
 
-def promedioGrupo(listaAlumnos):
+def PromedioGrupo(listaAlumnos):
     sumaGrupo =0
     for alumno in listaAlumnos:
         sumaGrupo += alumno[1]
@@ -43,9 +43,9 @@ def OrdenaBurbuja(listaAlumnos):
 
 
 # Programa principal
-alumnos = capturaAlumnos(30)
+alumnos = CapturaAlumnos(30)
 print("Lista de alumnos:", alumnos)
-print("Promedio del grupo:", promedioGrupo(alumnos))
+print("Promedio del grupo:", PromedioGrupo(alumnos))
 print("Calificación máxima:", MaximaCalificacion(alumnos))
 OrdenaBurbuja(alumnos)
 print("Lista de alumnos ordenada:", alumnos)

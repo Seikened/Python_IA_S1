@@ -1,4 +1,4 @@
-def numeroEntero(n):
+def NumeroEntero(n):
     tamLista = n
     lista = [0 for _ in range(tamLista)]
     for posicion in range(tamLista):
@@ -8,4 +8,4 @@ def numeroEntero(n):
 
 
 numero = int(input("¿De que tamaño quieres tu lista?: "))
-print(numeroEntero(numero))
+print(NumeroEntero(numero))
