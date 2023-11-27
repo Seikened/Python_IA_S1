@@ -18,9 +18,9 @@ x = 100
 y = 300
 vx = 50 #px/seg
 vy = 0 #px/seg
-deltaT = 0.001 #segundos
+deltaT = 0.01 #segundos
 
-aceleracionY = 1000 #px/seg^2
+aceleracionY = 1500 #px/seg^2
 
 salir = False
 while salir == False:
