@@ -24,7 +24,7 @@ dadoValor = {
     "AS":1
 }
 
-jugada = {
+jugadaValores = {
     "PAR": 10,
     "2 PARES": 20,
     "TERCIA": 30,
@@ -92,26 +92,37 @@ def PuntosObtenidos(dados):
         puntosObtenidos += dadoValor[dado]
 
     if jugadaContada["QUINTA"]:
-        puntosObtenidos += jugada["QUINTA"]
+        puntosObtenidos += jugadaValores["QUINTA"]
         nombreJugada = "QUINTA"
     elif jugadaContada["POCKER"]:
-        puntosObtenidos += jugada["POCKER"]
+        puntosObtenidos += jugadaValores["POCKER"]
         nombreJugada = "POCKER"
     elif jugadaContada["FULL_HOUSE"]:
-        puntosObtenidos += jugada["FULL_HOUSE"]
+        puntosObtenidos += jugadaValores["FULL_HOUSE"]
         nombreJugada = "FULL_HOUSE"
     elif jugadaContada["TERCIA"]:
-        puntosObtenidos += jugada["TERCIA"]
+        puntosObtenidos += jugadaValores["TERCIA"]
         nombreJugada = "TERCIA"
     elif jugadaContada["2_PARES"]:
-        puntosObtenidos += jugada["2 PARES"]
+        puntosObtenidos += jugadaValores["2 PARES"]
         nombreJugada = "2 PARES"
     elif jugadaContada["PAR"] == 1:
-        puntosObtenidos += jugada["PAR"]
+        puntosObtenidos += jugadaValores["PAR"]
         nombreJugada = "PAR"
 
     return puntosObtenidos, nombreJugada
 
+clear_screen()
+print("Bienvenido al juego de Cubilete")
+print("----------------------------------------------------")
+print("""Instrucciones:
+- Se juega con más de dos jugadores.
+- Cada jugador tiene un crédito inicial de 100.
+- Cada jugador apuesta una cantidad en cada juego.
+- Gana el jugador que obtenga la mejor jugada.
+- Respode las preguntas que se te hagan de manera correcta y como se te pide para poder jugar y que el juego funcione correctamente.
+NOTA: El juego no es perfecto, si encuentras un error, por favor reportalo
+""")
 cantidadJugadores = int(input("¿Cuantos jugadores habrá en la partida?: "))
 
 listaJugadores = []
@@ -164,7 +175,7 @@ while True:
         jugador["jugada"] = jugadorJugada
 
 
-
+        # Mejorar mano
         print("---------------------------------------------------------------")
         print("¿Desea mejorar su mano? [SI] o [NO]")
         respuesta = input("Escribe tu respuesta: ").upper()
@@ -176,7 +187,8 @@ while True:
             else:
                 for i in range(cantidadDadosCambiar):
                     print(f"¿Que dado desea cambiar? (escribe el nombre del dado)")
-                    dadoCambiar = input("Escribe tu respuesta: ").upper()
+                    dadoCambiar = int(input("Escribe tu respuesta (solo el numero del dado): "))
+                    dadoCambiar = f"DADO_{dadoCambiar}"
                     if dadoCambiar in jugador["dados"]:
                         jugador["dados"][dadoCambiar] = DadoRandom()
                         print(f"El dado {dadoCambiar} ha sido cambiado por {jugador["dados"][dadoCambiar]}")
@@ -235,4 +247,6 @@ while True:
     input("Presiona ENTER para continuar")
     
     if ronda == numeroRondas:
+        clear_screen()
+        print("Ya se han jugado todas las rondas juego terminado")
         break
