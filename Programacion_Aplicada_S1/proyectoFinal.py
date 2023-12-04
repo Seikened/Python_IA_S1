@@ -9,6 +9,9 @@
 # repartir el dinero de apuestas.
 #--------------------------------------------------------------------------------------
 import random
+from collections import Counter
+
+
 
 dadoCaras = ["SIETE_NEGROS", "OCHO_ROJOS", "J", "Q" , "K" , "AS"]
 
@@ -42,15 +45,62 @@ def Cubilete():
         "DADO_5":""
         }
     
-    for posicion,dado in enumerate(dados):
+    for i,dado in enumerate(dados):
         dados[dado] = DadoRandom()
     
     return dados
 
-def PuntosObtenidos(dados):
-    puntosObtenidos = 0
+def TipoJugada(conteo):
+    conteos = {
+        "PAR": 0,
+        "2_PARES": False,
+        "TERCIA": False,
+        "FULL_HOUSE": False,
+        "POCKER": False,
+        "QUINTA": False
+    }
+    for cantidad in conteo.values():
+        if cantidad == 2:
+            conteos["PAR"] += 1
+        elif cantidad == 3:
+            conteos["TERCIA"] = True
+        elif cantidad == 4:
+            conteos["POCKER"] = True
+        elif cantidad == 5:
+            conteos["QUINTA"] = True
+
+    if conteos["PAR"] == 2:
+        conteos["2_PARES"] = True
+
+    if conteos["TERCIA"] and conteos["PAR"] >= 1:
+        conteos["FULL_HOUSE"] = True
     
+    return conteos
+
+
+def PuntosObtenidos(dados):
+    valores_dados = list(dados.values())
+    conteo = Counter(valores_dados)
+    jugadaContada = TipoJugada(conteo)
+    puntosObtenidos = 0
+
+    # Comprobar las jugadas en orden de mayor a menor valor
+    if jugadaContada["QUINTA"]:
+        puntosObtenidos = jugada["QUINTA"] + dadoValor[conteo.most_common(1)[0][0]]
+    elif jugadaContada["POCKER"]:
+        puntosObtenidos = jugada["POCKER"] + dadoValor[conteo.most_common(1)[0][0]]
+    elif jugadaContada["FULL_HOUSE"]:
+        puntosObtenidos = jugada["FULL_HOUSE"] + dadoValor[conteo.most_common(1)[0][0]] + dadoValor[conteo.most_common(2)[0][0]]
+    elif jugadaContada["TERCIA"]:
+        puntosObtenidos = jugada["TERCIA"] + dadoValor[conteo.most_common(1)[0][0]]
+    elif jugadaContada["2_PARES"]:
+        puntosObtenidos = jugada["2 PARES"] + dadoValor[conteo.most_common(1)[0][0]] + dadoValor[conteo.most_common(2)[0][0]]
+    elif jugadaContada["PAR"] == 1:
+        puntosObtenidos = jugada["PAR"] + dadoValor[conteo.most_common(1)[0][0]]
+
     return puntosObtenidos
+
+
 
 
 cantidadJugadores = int(input("¿Cuantos jugadores habrá en la partida?: "))
@@ -93,6 +143,7 @@ while True:
         for dado in jugador["dados"]:
             print(f"{dado}: {jugador['dados'][dado]}")
         
-        
+        puntosJugador = PuntosObtenidos(jugador["dados"])
+        print(f"Puntos obtenidos: {puntosJugador}")
         
     break
