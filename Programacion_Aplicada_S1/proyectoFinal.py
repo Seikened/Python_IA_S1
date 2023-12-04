@@ -112,10 +112,6 @@ def PuntosObtenidos(dados):
 
     return puntosObtenidos, nombreJugada
 
-
-
-
-
 cantidadJugadores = int(input("¿Cuantos jugadores habrá en la partida?: "))
 
 listaJugadores = []
@@ -130,12 +126,10 @@ for numeroJugador in range(cantidadJugadores):
     }
     listaJugadores.append(jugador)
 
-
 #usoAS = input("¿El AS se usará como el valor manor de la mano [MAYOR] o menor de la mano del jugador [MENOR]?: (escribe tu respuesta) ").upper()
 numeroRondas = int(input("¿Cuantas rondas se jugarán?: "))
 ronda = 0
 creditoMesa = 0
-
 
 while True:
     clear_screen()
@@ -233,18 +227,12 @@ while True:
                 jugador["credito"] += creditoMesa
 
     creditoMesa = 0
-
-
+    
     for jugador in listaJugadores:
         jugador["puntos"] = 0
         jugador["dados"] = {}
         jugador["mejorarMano"] = False
-
-
-
-
-    
-    
     input("Presiona ENTER para continuar")
+    
     if ronda == numeroRondas:
         break
